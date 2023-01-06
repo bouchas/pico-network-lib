@@ -45,3 +45,5 @@ def do_connect(ssid=secrets['ssid'],psk=secrets['password']):
             led.off()
             time.sleep(.2)
         print('Wi-Fi connection succeed: ' + link_status(wlan.status()) + ' ('+wlan.ifconfig()[0]+')')
+
+    return wlan.ifconfig()[0]
